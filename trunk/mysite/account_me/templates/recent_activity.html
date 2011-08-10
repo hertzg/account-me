@@ -1,0 +1,29 @@
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<h1>Recent Transactions</h1>
+
+
+{% if transactions %}
+<table>
+
+{% for transaction in transactions %}
+
+<tr><td>{{ transaction.date  }}</td><td>{{ transaction.description }}</td><td>{{ transaction.ammount }}</td></tr>
+
+{% endfor %}
+
+</table>
+
+{% else %}
+
+<strong>No transactions!</strong>
+
+{% endif %}
+
+
+
+</body>
+</html>
