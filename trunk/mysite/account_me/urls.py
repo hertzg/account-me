@@ -1,5 +1,5 @@
 from django.conf.urls.defaults import patterns, include, url
-
+from mysite.account_me import views
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
@@ -7,7 +7,8 @@ from django.conf.urls.defaults import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'mysite.views.home', name='home'),
-    url(r'^accountme/', include('mysite.account_me.urls')),
+    url(r'^add-account/$', views.add_account),
+    url(r'^add/$', views.add),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
