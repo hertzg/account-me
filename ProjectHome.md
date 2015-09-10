@@ -1,0 +1,1 @@
+Locally hosted Django based personal finance software
